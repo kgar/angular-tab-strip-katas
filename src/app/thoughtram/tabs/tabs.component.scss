@@ -1,0 +1,30 @@
+ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  position: relative;
+}
+
+ul:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #AAA;
+  z-index: 1;
+}
+
+li {
+  padding: 0 10px;
+  border: 1px solid #AAA;
+  background: #ECECEC;
+  display: inline-block;
+}
+
+li.active {
+  background: #FFF;
+  color: #000;
+}

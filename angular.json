@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-tab-strip-trial"
+    }
+  },
+  "defaultProject": "angular-tab-strip-trial",
+  "cli": {
+    "analytics": "9e872e00-3673-4a5c-8c3a-e98aa0e47379"
+  }
 }
