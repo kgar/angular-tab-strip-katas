@@ -1,14 +1,55 @@
+<h1>Tabs component based on the DI engine</h1>
 <tabs>
   <tab tabTitle="Tab 1">Hello tab 1!</tab>
   <tab tabTitle="Tab 2">Hello tab 2!</tab>
 
   <p>Whoa! Check out those tabs and their content! 😲</p>
 </tabs>
-
+<hr />
+<h1>Tabs component based on ContentChildren decorator</h1>
 <tabs-alt>
   <tab-alt tabTitle="Tab 1">Hello tab 1!</tab-alt>
   <tab-alt tabTitle="Tab 2">Hello tab 2!</tab-alt>
 
   <p>Whoa! Check out those tabs and their content! 😲</p>
 </tabs-alt>
+<hr />
+<h1>Stepper (Wizard) examples using CDK</h1>
+<h2>Stepper in non-linear mode with form</h2>
+<app-custom-stepper>
+	<cdk-step>
+		<form>
+			<input type="text" name="a" required/>
+		</form>
+	</cdk-step>
+	<cdk-step>
+		<form>
+			<input type="text" name="b" value="b"/>
+		</form>
+	</cdk-step>
+</app-custom-stepper>
 
+<h2>Stepper in linear mode with form</h2>
+<app-custom-stepper linear>
+	<cdk-step [stepControl]="firstInputFormGroup">
+		<form [formGroup]="firstInputFormGroup">
+			<input formControlName="firstInput" type="text" name="a"/>
+		</form>
+	</cdk-step>
+	<cdk-step [stepControl]="secondInputFormGroup">
+		<form [formGroup]="secondInputFormGroup">
+			<input formControlName="secondInput" type="text" name="b"/>
+		</form>
+	</cdk-step>
+</app-custom-stepper>
+
+<h2>Stepper in linear mode without form</h2>
+<app-custom-stepper linear>
+	<cdk-step editable="false" [completed]="completed">
+		<input type="text" name="a" value="Cannot proceed to next step"/>
+    <button (click)="completeStep()">Complete step</button>
+	</cdk-step>
+	<cdk-step editable="false">
+		<input type="text" name="b" value="b"/>
+	</cdk-step>
+</app-custom-stepper>
