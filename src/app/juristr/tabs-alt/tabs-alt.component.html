@@ -1,1 +1,6 @@
-<p>tabs-alt works!</p>
+<ul>
+  <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
+    {{ tab.tabTitle }}
+  </li>
+</ul>
+<ng-content></ng-content>
