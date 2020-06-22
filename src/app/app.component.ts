@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
   title = 'angular-tab-strip-trial';
@@ -17,11 +18,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.firstInputFormGroup = this.fb.group({
-      firstInput: ['', Validators.required]
+      firstInput: ['', Validators.required],
     });
 
     this.secondInputFormGroup = this.fb.group({
-      secondInput: ['b', Validators.required]
+      secondInput: ['b', Validators.required],
     });
   }
 
