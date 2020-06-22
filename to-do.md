@@ -1,5 +1,10 @@
 # To Do:
-- Make this stepper: https://www.tutorialspoint.com/angular_material7/angular_material7_stepper.htm
+- Continue Kgar wizard stepper
+  - Add wizard tabs for each step
+  - Add step title to differentiate each step
+  - Add selected state to active step
+  - Add simple styles to demonstrate selected state
+  - Continue from there to add more features
 
 # Notes:
 - Popular wizard examples
