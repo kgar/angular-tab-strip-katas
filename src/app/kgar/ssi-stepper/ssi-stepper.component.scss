@@ -1,19 +1,15 @@
-html, body, div {
-  font-family: sans-serif;
-}
-
 $tab-bg: #e6e6e6;
 $main-bg: #fff;
 $selected-bg: #0195bd;
 
-.wizard {
+.wizard-stepper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.wizard a {
+.wizard-stepper .wizard-step {
   height: 2em;
   position: relative;
   background: $tab-bg;
@@ -25,7 +21,7 @@ $selected-bg: #0195bd;
   flex-direction: row;
   align-items: center;
 }
-.wizard a:after {
+.wizard-stepper .wizard-step:after {
   content: "";
   position: absolute;
   left: 0;
@@ -36,7 +32,7 @@ $selected-bg: #0195bd;
   border-top: 1em solid transparent;
   border-bottom: 1em solid transparent;
 }
-.wizard a:before {
+.wizard-stepper .wizard-step:before {
   content: "";
   position: absolute;
   right: -1em;
@@ -49,24 +45,41 @@ $selected-bg: #0195bd;
   z-index: 2;
 }
 
-.wizard a.active {
+.wizard-stepper .wizard-step.active {
   background-color: $selected-bg;
   color: #fff;
 }
 
-.wizard a.active:before {
+.wizard-stepper .wizard-step.active:before {
   border-left-color: $selected-bg;
 }
 
-.wizard a:first-child:after,
-.wizard a:last-child:before {
+.wizard-stepper .wizard-step:first-child:after,
+.wizard-stepper .wizard-step:last-child:before {
   border: none;
 }
 
-.wizard a:first-child {
+.wizard-stepper .wizard-step:first-child {
   padding-left: 1em;
 }
 
-.wizard a:last-child {
+.wizard-stepper .wizard-step:last-child {
   flex-grow: 1;
+}
+
+.wizard-stepper-buttons button + button{
+  margin-left: 0.5em;
+}
+
+
+/* BEGIN TEMP STYLES */
+.wizard-stepper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.wizard-stepper-content {
+  flex-grow: 1;
+  padding: 1em 0;
+  height: 400px;
 }

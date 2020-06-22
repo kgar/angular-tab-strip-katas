@@ -4,14 +4,14 @@ import {
   QueryList,
   AfterContentInit,
 } from '@angular/core';
-import { KgarStepComponent } from '../kgar-step/kgar-step.component';
+import { SsiStepComponent } from '../ssi-step/ssi-step.component';
 
 @Component({
-  selector: 'app-kgar-stepper',
-  templateUrl: './kgar-stepper.component.html',
-  styleUrls: ['./kgar-stepper.component.scss'],
+  selector: 'app-ssi-stepper',
+  templateUrl: './ssi-stepper.component.html',
+  styleUrls: ['./ssi-stepper.component.scss'],
 })
-export class KgarStepperComponent implements AfterContentInit {
+export class SsiStepperComponent implements AfterContentInit {
   get isLastStep() {
     return this.steps.toArray()[this.steps.toArray().length - 1].active;
   }
@@ -19,7 +19,7 @@ export class KgarStepperComponent implements AfterContentInit {
     return this.steps.toArray()[0].active;
   }
   selectedIndex = 0;
-  @ContentChildren(KgarStepComponent) steps: QueryList<KgarStepComponent>;
+  @ContentChildren(SsiStepComponent) steps: QueryList<SsiStepComponent>;
 
   constructor() {}
 
@@ -36,7 +36,7 @@ export class KgarStepperComponent implements AfterContentInit {
 
   goRight() {
     let activateNext = false;
-    let stepToDeactivate: KgarStepComponent;
+    let stepToDeactivate: SsiStepComponent;
     for (let i = 0; i < this.steps.length; i++) {
       const step = this.steps.toArray()[i];
 
@@ -55,7 +55,7 @@ export class KgarStepperComponent implements AfterContentInit {
 
   goLeft() {
     let activateNext = false;
-    let stepToDeactivate: KgarStepComponent;
+    let stepToDeactivate: SsiStepComponent;
     for (let i = this.steps.length - 1; i >= 0 ; i--) {
       const step = this.steps.toArray()[i];
 

@@ -1,0 +1,24 @@
+<!-- TODO: Add wizard tabs here with step titles and selected state; add simple styles to demonstrate -->
+<div class="wizard-stepper-container">
+  <div class="wizard-stepper">
+    <div
+      class="wizard-step"
+      *ngFor="let step of steps"
+      [class.active]="step.active"
+    >
+      {{ step.stepTitle }}
+    </div>
+    <div class="wizard-step"></div>
+  </div>
+
+  <div class="wizard-stepper-content">
+    <ng-content></ng-content>
+  </div>
+
+
+  <div class="wizard-stepper-buttons">
+    <button (click)="goLeft()" [disabled]="isFirstStep">Go Left</button>
+    <button (click)="goRight()" [disabled]="isLastStep">Go Right</button>
+    <button [disabled]="!isLastStep">Save!</button>
+  </div>
+</div>

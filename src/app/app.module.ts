@@ -9,8 +9,9 @@ import { TabComponent } from './thoughtram/tab/tab.component';
 import { TabsAltComponent } from './juristr/tabs-alt/tabs-alt.component';
 import { TabAltComponent } from './juristr/tab-alt/tab-alt.component';
 import { CustomStepperComponent } from './steppers/custom-stepper/custom-stepper.component';
-import { KgarStepperComponent } from './kgar/kgar-stepper/kgar-stepper.component';
-import { KgarStepComponent } from './kgar/kgar-step/kgar-step.component';
+import { SsiStepperComponent } from './kgar/ssi-stepper/ssi-stepper.component';
+import { SsiStepComponent } from './kgar/ssi-step/ssi-step.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import { KgarStepComponent } from './kgar/kgar-step/kgar-step.component';
     TabsAltComponent,
     TabAltComponent,
     CustomStepperComponent,
-    KgarStepperComponent,
-    KgarStepComponent
+    SsiStepperComponent,
+    SsiStepComponent
   ],
   imports: [
     BrowserModule,
